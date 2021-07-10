@@ -1,0 +1,72 @@
+.btnBack{
+    /* background-color: rgb(214, 148, 6); */
+    background-color: transparent;
+    color: #000;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .btnNext{
+    /* background-color: rgb(214, 148, 6); */
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    
+  }
+  .currentPage{
+    /* background-color: rgb(214, 148, 6); */
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 30px;;
+    font-weight: bold;
+    margin: 1px;
+    cursor: pointer;
+  }
+
+  .paginationBtns{
+    padding-top: 15px;
+    height: 50px;
+    width: 25%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  .loading {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    margin: 15% auto;
+  }
+
+  .range {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 30px;;
+    font-weight: bold;
+    margin: 1px;
+  }
+
+  .current {
+    background-color: rgb(214, 148, 6);;
+    color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 30px;;
+    font-weight: bold;
+    margin: 1px;
+  }
+
+  .paginationBtns1 {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }

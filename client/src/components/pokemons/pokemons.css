@@ -1,0 +1,78 @@
+.contenedor {
+    width: 75%;
+    margin: auto;
+}
+
+.pokeDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.poke {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.inputSearch {
+    
+    background-color: transparent;
+    padding: 10px;
+    border: 1px solid white;
+    outline: none;
+    border-radius: 20px;
+    color: white;
+}
+
+.inputSearch:focus {
+    background-color: black;
+    color: white;
+}
+
+.form-container {
+    display: flex;
+    margin: auto;
+}
+
+.searchContainer {
+    display: flex;
+    margin: 20px;
+}
+
+.btnSearch {
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: black;
+}
+
+.btnSearch:hover {
+    background-color: tomato;
+}
+
+.loadContainer {
+    align-self: center;
+    display: flex;
+    height: 300px;
+}
+
+.allHome {
+    display: flex;
+    flex-direction: column;
+}
+
+.loading {
+    margin: auto;
+}
+
+.noTxt {
+    color: black;
+    margin: auto;
+}
+
+.noContainer {
+    display: flex;
+    margin: auto;
+    height: 150px;
+}
