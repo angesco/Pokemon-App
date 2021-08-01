@@ -75,12 +75,59 @@
 }
 
 .btnEv {
-    background: transparent;
-    width: 65px;
+    background: orange;
+    border-radius: 5px;
+    text-align: start;
+    width: 75px;
     height: 40px;
     position: relative;
     top: 95px;
     left: 25px;
     border: none;
     align-items: center;
+    cursor: url('../../Pokeball.cur'),auto;
+}
+
+.btnEv:hover {
+    background: orangered;
+}
+
+.btnStats {
+    position: relative;
+    background: orange;
+    width: 75px;
+    height: 50px;
+    top: 12px;
+    left: 52px;
+    border-radius: 5px;
+    cursor: url('../../Pokeball.cur'),auto;
+}
+
+.btnStats2 {
+    position: relative;
+    background: orangered;
+    border: none;
+    width: 75px;
+    height: 50px;
+    top: 35px;
+    left: -188px;
+    border-radius: 5px;
+    cursor: url('../../Pokeball.cur'),auto;
+}
+
+.btnStats:hover {
+    background: orangered;
+}
+
+.btnEv2 {
+    background: orangered;
+    border: none;
+    position: relative;
+    left: 190px;
+    top: 26px;
+    width: 75px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: start;
+    cursor: url('../../Pokeball.cur'),auto;
 }

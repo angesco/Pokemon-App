@@ -23,7 +23,8 @@ import './detail.css'
 
 
     function handleClick(e) {
-		setShowEv(true)
+		showEv === false? setShowEv(true) : setShowEv(false)
+		// setShowEv(true)
 	}
 
 
@@ -45,8 +46,12 @@ if(props.pokemonDetail.types){
 		<div className="cardetail">
 		<div className="arriba">
 			<img src={props.pokemonDetail.sprites.other['official-artwork'].front_default} alt={props.pokemonDetail.name} className="imgDetail"/>
-			{showEv === true? 
-			<Evolution getEvolution={props.getEvolution} evolutions={props.evolution} pokemon={props.pokemonDetail} showEv={showEv}></Evolution>
+			{showEv === true?
+			<div>
+				<Evolution getEvolution={props.getEvolution} evolutions={props.evolution} pokemon={props.pokemonDetail} showEv={showEv}></Evolution>
+			    <button className='btnStats' onClick={() => handleClick()}>Stats</button>
+				<button className='btnEv2'>Evolutions</button>
+			</div> 
 		    :
 				<div className="detail">
 			<h2 className="titleGame">{props.pokemonDetail.name.charAt(0).toUpperCase() + props.pokemonDetail.name.slice(1)}</h2>
@@ -60,8 +65,8 @@ if(props.pokemonDetail.types){
 				<p>Types: {types.join(", ") || 'no data'}  </p>
 			</div>
 			
-          <button className='btnEv' onClick={() => handleClick()}></button> 
-
+          <button className='btnEv' onClick={() => handleClick()}>Evolutions</button> 
+          <button className='btnStats2'>Stats</button>
 			</div>}
 		</div>
 
