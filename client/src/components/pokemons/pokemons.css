@@ -1,28 +1,30 @@
 .contenedor {
-    width: 75%;
-    margin: auto;
-}
+    /* width: 100%; */
+    display: flex;
+    margin-left: 50px;}
 
 .pokeDiv {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    width: 75vw;
 }
 
 .poke {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     padding: 15px;
+    width: 70vw;
 }
 
 .inputSearch {
-    
     background-color: transparent;
     padding: 10px;
     border: 1px solid white;
     outline: none;
     border-radius: 20px;
     color: white;
+    margin-left: 2vw;
 }
 
 .inputSearch:focus {
@@ -37,7 +39,7 @@
 
 .searchContainer {
     display: flex;
-    margin: 20px;
+    margin: 10px;
 }
 
 .btnSearch {
@@ -60,6 +62,8 @@
 .allHome {
     display: flex;
     flex-direction: column;
+    margin: auto;
+    width: 80%;
 }
 
 .loading {
@@ -75,4 +79,27 @@
     display: flex;
     margin: auto;
     height: 150px;
+    width: 65vw;
 }
+.all {
+    display: flex;
+}
+
+/* .filterContainer {
+    border: 3 px solid red;
+} */
+
+.btnPoke {
+    top: 90px;
+    margin-top: 30px;
+    background-image: url('../../pokeicon.png');
+    background-size: 50px 50px;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    position: sticky;
+}
+
+/* .divGame {
+    display: flex;
+} */

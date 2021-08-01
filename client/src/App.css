@@ -41,4 +41,10 @@ body {
   background-image: url('https://assets.pokemon.com//assets/cms2-es-es/img/misc/virtual-backgrounds/sword-shield/pokemon-in-the-wild.png');
   background-attachment: fixed;
   background-size: 1320px 600px;
+  cursor: url(./Pokeball.cur),auto;
 }
+
+.title {
+  cursor: url(catched.png),auto;
+}
+/* https://cdn.custom-cursor.com/db/250/32/arrow2282.png */

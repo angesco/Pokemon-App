@@ -1,7 +1,9 @@
 const initialState = {
     pokemons:[],
     totalPages: '',
-    filteredPokemons: []
+    pokemonDetail: [],
+    types:[],
+    evolution:{},
     };
   
     function rootReducer(state=initialState, action){
@@ -11,6 +13,24 @@ const initialState = {
           ...state,
           pokemons: action.payload.pokemons,
           totalPages: action.payload.totalPages
+        }
+      }
+      if(action.type === 'GET_POKEMON'){
+        return{
+          ...state,
+          pokemonDetail: action.payload,
+        }
+      }
+      if(action.type === 'GET_TYPES'){
+        return{
+          ...state,
+          types: action.payload,
+        }
+      }
+      if(action.type === 'GET_EVOLUTION'){
+        return{
+          ...state,
+          evolution: action.payload,
         }
       }
     

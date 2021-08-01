@@ -1,29 +1,35 @@
 import React, { useState, useEffect} from 'react';
 import { connect } from 'react-redux';
-import { getAllPokemons } from '../../actions/index.js'
+import { getAllPokemons, getTypes, getEvolution } from '../../actions/index.js'
 import { Poke } from '../Poke/Poke.js'
+import { Filter } from '../Filters/filters.js'
 import Pagination from '../Pagination/pagination.js';
-import axios from "axios";
 import './pokemons.css'
-import {Link} from 'react-router-dom';
 
 export function Pokemons(props){
-
 	const [numeroPagina, setNumeroPagina] = useState(1); 
-	var [title, setTitle] = useState("")
+	let [title, setTitle] = useState("")
   let [loading, setLoading] = useState(true)
+  let [pokedex, setPokedex] = useState('close')
+  let [order, setOrder] = useState('')
+  let [filter, setFilter] = useState('')
 
    let pokes = props.pokemons.slice()
 
 	useEffect(()=> {
-		props.getAllPokemons(numeroPagina, title)
+		props.getAllPokemons(numeroPagina, title, order,filter)
+    console.log(filter)
     setTimeout(() => setLoading(false), 1500)
-	},[numeroPagina, title])
+	},[numeroPagina, title, order, filter])
+
 
   useEffect(()=> {
 		setNumeroPagina(1)
 	},[title])
 
+  useEffect(()=> {
+		props.getTypes()
+	},[])
 
     function handleChange(event) {
         setTitle(event.target.value)
@@ -35,28 +41,32 @@ export function Pokemons(props){
       if(title.length === 0){
         alert("Insert a valid pokemon name")
       } else{
-        props.getAllPokemons(numeroPagina, title)
+        props.getAllPokemons(numeroPagina, title, order, filter)
         setNumeroPagina(1)
       }
     
       }
 
-    let pokesData = pokes.length === 0? <div className="noContainer"><p className="noTxt">No Pokemons</p></div> : pokes.map((game) => {
+    let pokesData = pokes.length === 0? <div className="noContainer"><p className="noTxt">No Pokemons</p></div> : pokes.map((p) => {
 
         return (
-        <div className="divGame" key={game.id}>
+        <div className="divGame" key={p.pokemon? p.pokemon.id : p.id}>
             <Poke
-            name={game.name}
-            url={game.url}
-            // id={game.id}
-            // genres={game.genres}
+            name={p.pokemon? p.pokemon.name : p.name}
+            url={p.pokemon? p.pokemon.url : p.url}
             />
        </div>)
         })
 
 	return (
 		// props.pokemons.length === 0? <div className="loadContainer"><img src='https://media1.giphy.com/media/l4FGKbWgkhHVGXzTW/source.gif' className="loading"></img></div> :
-	<div className="allHome">
+    <div className="all">
+      { pokedex === 'close'? <div className='btnContainer'><div className="btnPoke" onClick={(e) => setPokedex('open')} title='Open Pokedex'></div></div> :
+    <div className="filterContainer">
+        <Filter setLoading={setLoading} setPoke={setPokedex} setOrder={setOrder} types={props.types} setFilter={setFilter} setNumeroPagina={setNumeroPagina}></Filter>
+    </div>}
+    
+  <div className="allHome">
 
 <div className="searchContainer">
         <form className="form-container" onSubmit={(e) => handleSubmit(e)}>
@@ -92,23 +102,28 @@ export function Pokemons(props){
       }
             {pokes.length === 0? null :
             <div className="paginationBtns">
-                  <Pagination totalPages={props.totalPages} page={numeroPagina} setPage={setNumeroPagina} setLoad={setLoading}></Pagination>
+                  <Pagination totalPages={props.totalPages} page={numeroPagina} setPage={setNumeroPagina} setLoad={setLoading} types={props.types}></Pagination>
 	        </div>
           }
 		</div>
+    </div> 
 	)
 }
 
 function mapStateToProps(state){
 	return {
 		pokemons: state.pokemons,
-        totalPages: state.totalPages
+    totalPages: state.totalPages,
+    types: state.types,
+    evolution:state.evolution,
 	}
 }
 
 function mapDispatchToProps(dispatch){
 	return {
-		getAllPokemons: (page, name) => dispatch(getAllPokemons(page, name)),
+		getAllPokemons: (page, name, order,filter) => dispatch(getAllPokemons(page, name, order, filter)),
+    getTypes:() => dispatch(getTypes()),
+    getEvolution:(id) => dispatch(getEvolution(id)),
 	}
 }
 

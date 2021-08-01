@@ -1,0 +1,74 @@
+.filtros {
+    display: flex;
+    flex-direction: column-reverse;
+    position: sticky;
+    top: 80px;
+    height: 250px;
+    width: 150px;
+    /* background-color: rgb(165, 15, 15); */
+    background-image: url('https://wallpaperaccess.com/full/5818306.jpg');
+    background-size: 210px 450px;
+    padding: 20px;
+    border-radius: 25px;
+    /* justify-content: space-around; */
+    justify-content: center;
+}
+
+.selectCreator {
+    position: relative;
+    top: 55px;
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+    width: 100%;
+    cursor: url('../../Pokeball.cur'),auto;
+}
+
+.selectCreator:hover {
+    background-color: rgb(73, 73, 204);
+}
+
+.selectAlpha {
+    display: flex;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+    width: 100%;
+    align-self: center;
+    top: 20px;
+    cursor: url('../../Pokeball.cur'),auto;
+}
+
+.selectAlpha:focus {
+    border: none;
+    outline: none;
+}
+
+.selectAlpha:hover {
+    background-color: rgb(73, 73, 204);
+}
+
+.close {
+    display: flex;
+    align-self: flex-end;
+    top: -170px;
+    position: relative;
+}
+.closeTxt {
+    font-weight: bolder;
+}
+
+.closeTxt:hover {
+    color: white;
+}
+
+.filterCreator {
+    margin-bottom: 40px;
+}
+
+option {
+    font-size: 12px;
+    font-family:monospace;
+    font-weight: bolder;
+}

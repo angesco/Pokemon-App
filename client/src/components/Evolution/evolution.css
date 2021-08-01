@@ -1,0 +1,25 @@
+.evContainer {
+ position: relative;
+ left: 260px;
+ top: -30px;
+}
+
+.evolutions {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    width: 175px;
+    height: 200px;
+    flex-wrap: wrap;
+}
+
+.evolutionsIcon {
+    height: 80px;
+    width: 80px;
+}
+
+h5 {
+    margin: 0px;
+    font-size: 9.5px;
+    font-weight: bolder;
+}

@@ -2,6 +2,8 @@ const { Router } = require('express');
 
 
 const pokemons = require('./pokemons.js');
+const pokemon = require('./pokemon.js');
+const types = require('./types.js');
 
 const bodyParser = require('body-parser');
 // Importar todos los routers;
@@ -16,5 +18,7 @@ const router = Router();
 
 
 router.use('/pokemons', pokemons);
+router.use('/pokemon', pokemon);
+router.use('/types', types);
 
 module.exports = router;

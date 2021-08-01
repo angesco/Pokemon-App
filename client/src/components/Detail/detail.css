@@ -1,0 +1,108 @@
+.arriba {
+    color: black;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    font-family:monospace;
+}
+
+
+.imgDetail {
+    height: 150px;
+    width: 150px;
+    align-self: center;
+    border-radius: 20px;
+    margin-top: 20px;
+    position: relative;
+    left: -115px;
+    top: 110px;
+    /* height: 29vh;
+    width: 13vw;
+    align-self: center;
+    border-radius: 20px;
+    margin-top: 4vh;
+    position: relative;
+    left: -21vh;
+    top: 18vh; */
+}
+
+/* .imgEvo {
+    height: 150px;
+    width: 150px;
+    align-self: center;
+    border-radius: 20px;
+    margin-top: 20px;
+    position: relative;
+    left: 30px;
+    top: 80px;
+} */
+
+.nameEvo{
+    position: relative;
+    left: -70px;
+    top: 60px
+}
+
+.detail{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -7em;
+    left: 18.5em;
+}
+
+.detailEvo{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -100px;
+    left: 240px;
+}
+
+.titleGame {
+    align-self: center;
+    position: relative;
+    left: -6em;
+    top: 2em;
+}
+
+.pContainer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.pContainer p{
+    margin: 5px;
+}
+
+
+
+/* .descriptionGame{
+    margin: 20px;
+} */
+
+.contdetail {
+    /* 450px */
+    height: 29em;
+    width: 27.9em;
+    background-image: url('../../dex.png');
+    background-size: 28em 29em;
+    margin: 15px auto;
+}
+
+.btnEv {
+    background: transparent;
+    width: 65px;
+    height: 40px;
+    position: relative;
+    top: 95px;
+    left: 25px;
+    border: none;
+    align-items: center;
+   
+}
+.btnEv:active{
+    background-color: tomato;
+}
