@@ -7,6 +7,7 @@ import './detail.css'
 
  function Detail(props){
    let [load, setLoad] = useState(true)
+   let [loadPokeDex, setLoadPokeDex] = useState(true)
    let [showEv, setShowEv] = useState(false)
    let [specie, setSpecie] = useState('')
 
@@ -18,35 +19,30 @@ import './detail.css'
 
   useEffect(() => {
 	setTimeout(props.getEvolution(props.pokemonDetail), 1500)
+	setTimeout(() => setLoadPokeDex(false), 200)
   }, [showEv])
 
 
 
     function handleClick(e) {
+		setLoadPokeDex(true)
 		showEv === false? setShowEv(true) : setShowEv(false)
 		// setShowEv(true)
 	}
 
-
 if(props.pokemonDetail.types){
-
  var types = [];
-
  for(let i = 0; i < props.pokemonDetail.types.length; i++) {
     types.push(props.pokemonDetail.types[i].type.name)
    } 
-
-
- } 
-
-
+ }
 	return(
         load === true ? <div className="loadContainer"><img src='https://media1.giphy.com/media/l4FGKbWgkhHVGXzTW/source.gif' className="loading"></img></div> :
 		<div className="contdetail">
 		<div className="cardetail">
 		<div className="arriba">
 			<img src={props.pokemonDetail.sprites.other['official-artwork'].front_default} alt={props.pokemonDetail.name} className="imgDetail"/>
-			{showEv === true?
+			{loadPokeDex === false? showEv === true?
 			<div>
 				<Evolution getEvolution={props.getEvolution} evolutions={props.evolution} pokemon={props.pokemonDetail} showEv={showEv}></Evolution>
 			    <button className='btnStats' onClick={() => handleClick()}>Stats</button>
@@ -64,13 +60,10 @@ if(props.pokemonDetail.types){
 				<p>Attack: {props.pokemonDetail.stats[1].base_stat || 'no data'}</p>
 				<p>Types: {types.join(", ") || 'no data'}  </p>
 			</div>
-			
-          <button className='btnEv' onClick={() => handleClick()}>Evolutions</button> 
-          <button className='btnStats2'>Stats</button>
-			</div>}
+			<button className='btnEv' onClick={() => handleClick()}>Evolutions</button> 
+            <button className='btnStats2'>Stats</button>
+			</div> : <div className='subLoad'><img src='https://media1.giphy.com/media/l4FGKbWgkhHVGXzTW/source.gif' className="loading subLoading"></img></div>}
 		</div>
-
-
 		</div>
 		</div>
 		)

@@ -21,7 +21,7 @@
     border: none;
     padding: 4px;
     width: 100%;
-    cursor: url('../../Pokeball.cur'),auto;
+    cursor: url('../../Cursor/Pokeball.cur'),auto;
 }
 
 .selectCreator:hover {
@@ -37,7 +37,7 @@
     width: 100%;
     align-self: center;
     top: 20px;
-    cursor: url('../../Pokeball.cur'),auto;
+    cursor: url('../../Cursor/Pokeball.cur'),auto;
 }
 
 .selectAlpha:focus {

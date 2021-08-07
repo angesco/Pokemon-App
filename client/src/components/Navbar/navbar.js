@@ -12,9 +12,8 @@ export default function NavBar() {
             <nav>
                 <ul className="list">
                     <li className="list-item">
-                        {/* <NavLink exact to="/home" >Home</NavLink> */}
                         <NavLink exact to="/home"><span class="material-icons icons">home</span></NavLink>
-                        <NavLink to="/home/favs"><span class="material-icons icons">favorite</span></NavLink>
+                        {/* <NavLink to="/home/favs"><span class="material-icons icons">favorite</span></NavLink> */}
                     </li>
                 </ul>
             </nav>

@@ -69,7 +69,7 @@
     /* 450px */
     height: 29em;
     width: 27.9em;
-    background-image: url('../../dex.png');
+    background-image: url('../../Images/dex.png');
     background-size: 28em 29em;
     margin: 15px auto;
 }
@@ -85,7 +85,7 @@
     left: 25px;
     border: none;
     align-items: center;
-    cursor: url('../../Pokeball.cur'),auto;
+    cursor: url('../../Cursor/Pokeball.cur'),auto;
 }
 
 .btnEv:hover {
@@ -100,7 +100,7 @@
     top: 12px;
     left: 52px;
     border-radius: 5px;
-    cursor: url('../../Pokeball.cur'),auto;
+    cursor: url('../../Cursor/Pokeball.cur'),auto;
 }
 
 .btnStats2 {
@@ -112,7 +112,7 @@
     top: 35px;
     left: -188px;
     border-radius: 5px;
-    cursor: url('../../Pokeball.cur'),auto;
+    cursor: url('../../Cursor/Pokeball.cur'),auto;
 }
 
 .btnStats:hover {
@@ -129,5 +129,15 @@
     height: 40px;
     border-radius: 5px;
     text-align: start;
-    cursor: url('../../Pokeball.cur'),auto;
+    cursor: url('../../Cursor/Pokeball.cur'),auto;
+}
+
+.subLoad {
+    display: flex;
+}
+
+.subLoading {
+    position: relative;
+    left: 120px;
+    top: 30px;
 }
