@@ -21,9 +21,9 @@
 - [ ] Express
 - [ ] PostgreSQL
 
-<img height="200" src="./images/landing.png" />
-<img height="200" src="./images/home.png" />
-<img height="200" src="./images/filters.png" />
-<img height="200" src="./images/dynamicSearch.png" />
-<img height="200" src="./images/stats.png" />
-<img height="200" src="./images/evolution.png" />
+<img height="300" width="600" src="./images/landing.png" />
+<img height="300" width="600" src="./images/home.png" />
+<img height="300" width="600" src="./images/filters.png" />
+<img height="300" width="600" src="./images/dynamicSearch.png" />
+<img height="300" width="600" src="./images/stats.png" />
+<img height="300" width="600" src="./images/evolution.png" />
