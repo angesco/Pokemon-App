@@ -1,9 +1,9 @@
 # Pokemon-App
 
-<p align="right">
-  
-</p>
+<p align="right"></p>
 <img height="200" src="./images/pokemon.png" />
+
+In this project you can inspect the different pokemons, filter by type, sort alphabetically, and search by name. It also offers the possibility of seeing the statistics of each one as well as their evolutions
 
 #### Start API 🔧
 `cd api`
